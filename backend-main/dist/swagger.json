@@ -1,0 +1,79 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Library API",
+        "version": "1.0.0",
+        "description": "Technical test to create an API in NodeJs using TypeScript",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "servers": [
+        {
+            "url": "/",
+            "description": "Local or Dev"
+        }
+    ],
+    "tags": [
+        {
+            "name": "User",
+            "description": "API for create users"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/create": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "Summary": "Create a new user",
+                "requestBody": {
+                    "required": "true",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "New user created."
+                    },
+                    "400": {
+                        "description": "Bad Request."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "description": "the user name"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "the password"
+                    }
+                },
+                "example": {
+                    "username": "Alex",
+                    "password": "1234"
+                }
+            }
+        }
+    }
+}

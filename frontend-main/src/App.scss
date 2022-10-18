@@ -1,0 +1,240 @@
+@import "styles/base";
+
+.app {
+  .app-content{
+    margin: 25px;
+  }
+  p{
+    color: $text-color;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  h4{
+    color: $dark-green-color;
+    font-weight: 700;
+  }
+  img {
+    max-width: 800px;
+    //border: 1px solid $dark-green-color;
+    margin-bottom: 15px;
+  }
+  .app-header-logo{
+    max-height: 80px;
+    border: none;
+  }
+
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 1000px;
+  height: 800px;
+  border-style: solid;
+  border-width: thin;
+  border-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+////////////////////////////////////////////////FORM HEADER/////////////////////////////////////////////////
+
+.form-container .header {
+  flex: 25%;
+}
+
+.form-container .header .header-top{
+  height: 50%;
+  background-color: $light-green-color;
+  padding: 25px 120px 25px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container .header h2{
+  margin-top: 20px;
+  margin-left: 120px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.form-container .header h2:after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 65px;
+  border-bottom: 3px solid $green-color;
+}
+
+
+.form-container .header .header-top span {
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+
+
+.form-container .header .header-top span.num {
+  background: $dark-green-color;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  line-height: 1.8em;
+  width: 1.8em; 
+}
+
+
+.form-container .header .header-top span.active {
+  background: $dark-green-color;
+  border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  line-height: 2.2em;
+  width: 2.2em; 
+}
+
+.form-container .header .header-top span.disabled {
+  background: gray;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  line-height: 1.8em;
+  width: 1.8em; 
+}
+
+////////////////////////////////////////////////////FORM BODY////////////////////////////////////////////////
+
+.form-container .body {
+  flex: 55%;
+  margin: 25px 120px 25px 120px;
+}
+
+.first-step-container img {
+  width: 40%;
+  margin:auto;
+	display:block;
+}
+
+.second-step-container input{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.second-step-container .input-large{
+  width: 100%;
+}
+
+.second-step-container .input-short{
+  width: 100%;
+}
+
+.two-containers1 {
+  padding-top: 20px;
+  float: left;
+  width: 45%;
+}
+
+.two-containers2 {
+  padding-top: 20px;
+  float: right;
+  width: 45%;
+}
+
+.second-step-container p{
+  clear: both;
+  padding-top: 40px;
+}
+
+.third-step-container .success-container {
+  width: 40%;
+  float: left;
+}
+
+.third-step-container .success-container img{
+  margin-left: 60px;
+  width: 60%;
+}
+
+.third-step-container .success-text-container {
+  margin-top: 20px;
+  width: 60%;
+  float: right;
+}
+
+.third-step-container .success-text-container p{
+  text-align: justify;
+}
+
+//////////////////////////////////////////FOOTER/////////////////////////////////////////////////
+
+
+.form-container .footer {
+  flex: 20%;
+}
+
+.form-container .footer hr {
+  width: 80%;
+  color: gray;
+}
+
+.form-container .footer button {
+  border: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+.form-container .footer .left-button {
+  margin-left: 120px;
+}
+
+.form-container .footer .right-button {
+  float: right;
+  margin-right: 120px;
+}
+
+.form-container .footer .back-button {
+  background-color: white;
+  color: black;
+}
+
+.form-container .footer .next-button {
+  background-color: gray;
+  color: white;
+}
+
+.form-container .footer .green-button {
+  background-color: $dark-green-color;
+  color: white;
+}
+
+
+//////////////////////////////////////////VALIDATIONS////////////////////////////////////////////
+
+.error {
+  display: none;
+  margin-bottom: 0;
+  color: red !important;
+  padding-top: 0px !important;
+}
+
+.error1 {
+  display: block !important;
+}
